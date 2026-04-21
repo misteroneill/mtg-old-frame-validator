@@ -12,59 +12,20 @@ body {
   background: #fff;
 }
 
-#header {
-  background-color: #333;
-  color: #fff;
+p {
+  margin-bottom: 0.4rem;
 }
 
-#header h1 {
-  font-size: 1.1rem;
-  font-weight: bold;
-  margin: 0;
+ol {
+  padding-left: 1.5rem;
 }
 
-.container {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 1rem;
-}
-
-#result > div {
-  margin-bottom: 1.25rem;
-}
-
-.result-valid {
-  padding: 0.75rem 1rem;
-  border: 1px solid #28a745;
-  background: #d4edda;
-  color: #155724;
-}
-
-.result-error {
-  padding: 0.75rem 1rem;
-  border: 1px solid #dc3545;
-  background: #f8d7da;
-  color: #721c24;
-}
-
-.result-error ul {
-  margin-top: 0.5rem;
+ul {
   padding-left: 1.25rem;
 }
 
-.result-error li {
+li {
   margin-top: 0.2rem;
-}
-
-.result-loading {
-  padding: 0.75rem 1rem;
-  border: 1px solid #aaa;
-  background: #f5f5f5;
-  color: #555;
-}
-
-.field {
-  margin-bottom: 1rem;
 }
 
 label {
@@ -110,4 +71,100 @@ button:hover:not(:disabled) {
 button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+#header {
+  background-color: #333;
+  color: #fff;
+}
+
+#header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#header h1 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+#help-btn {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  width: 1.4rem;
+  height: 1.4rem;
+  padding: 0;
+  font-size: 0.85rem;
+  line-height: 1;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+#help-btn:hover {
+  background: #fff;
+  color: #333;
+}
+
+#help-panel {
+  border-bottom: 1px solid #ccc;
+  background: #f5f5f5;
+}
+
+#help-panel .container {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+#help-panel
+
+#help-panel a {
+  color: #111;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+#result > div {
+  margin-bottom: 1.25rem;
+}
+
+.result-valid {
+  padding: 0.75rem 1rem;
+  border: 1px solid #28a745;
+  background: #d4edda;
+  color: #155724;
+}
+
+.result-error {
+  padding: 0.75rem 1rem;
+  border: 1px solid #dc3545;
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.result-error ul {
+  margin-top: 0.5rem;
+  padding-left: 1.25rem;
+}
+
+.result-error li {
+  margin-top: 0.2rem;
+}
+
+.result-loading {
+  padding: 0.75rem 1rem;
+  border: 1px solid #aaa;
+  background: #f5f5f5;
+  color: #555;
+}
+
+.field {
+  margin-bottom: 1rem;
 }

@@ -4,6 +4,14 @@ import { getFormat } from './formats/index.js';
 const form      = document.getElementById('validator-form');
 const resultDiv = document.getElementById('result');
 const submitBtn = document.getElementById('submit-btn');
+const helpBtn   = document.getElementById('help-btn');
+const helpPanel = document.getElementById('help-panel');
+
+helpBtn.addEventListener('click', () => {
+  const isOpen = !helpPanel.hidden;
+  helpPanel.hidden = isOpen;
+  helpBtn.setAttribute('aria-expanded', String(!isOpen));
+});
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();

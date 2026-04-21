@@ -10,6 +10,18 @@
   <div id="header">
     <div class="container">
       <h1>MTG Old Frame Deck Validator</h1>
+      <button type="button" id="help-btn" aria-expanded="false" aria-controls="help-panel">?</button>
+    </div>
+  </div>
+  <div id="help-panel" hidden>
+    <div class="container">
+      <p>To copy your deck list from Moxfield:</p>
+      <ol>
+        <li>Open your deck on <a href="https://www.moxfield.com" target="_blank" rel="noopener">Moxfield</a>.</li>
+        <li>Under the <strong>More</strong> menu, click <strong>Export</strong>.</li>
+        <li>Click <strong>Copy Plain Text</strong> from the export options.</li>
+        <li>Paste deck contents into the Deck List field below.</li>
+      </ol>
     </div>
   </div>
   <div class="container">
@@ -23,7 +35,7 @@
         </select>
       </div>
       <div class="field">
-        <label for="decklist">Deck List (Moxfield plain text format)</label>
+        <label for="decklist">Deck List (Moxfield Plain Text format)</label>
         <textarea
           id="decklist"
           name="decklist"
