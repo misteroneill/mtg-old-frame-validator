@@ -22,7 +22,7 @@ form.addEventListener('submit', async (e) => {
     return;
   }
 
-  resultDiv.innerHTML = '<div class="result-loading">Validating — looking up cards via Scryfall&hellip;</div>';
+  resultDiv.innerHTML = '<div class="result-loading">Looking up cards via Scryfall&hellip;</div>';
   submitBtn.disabled = true;
 
   try {
@@ -32,7 +32,7 @@ form.addEventListener('submit', async (e) => {
     if (result.valid) {
       showValid(format.name);
     } else {
-      showError(result.errors);
+      showError(result.errors, format.name);
     }
   } catch (err) {
     showError([`Unexpected error: ${err.message}`]);
@@ -43,13 +43,13 @@ form.addEventListener('submit', async (e) => {
 
 function showValid(formatName) {
   resultDiv.innerHTML =
-    `<div class="result-valid">Valid — this deck is legal for ${esc(formatName)}.</div>`;
+    `<div class="result-valid">This deck is <strong>legal</strong> for ${esc(formatName)}.</div>`;
 }
 
-function showError(errors) {
+function showError(errors, formatName) {
   const items = errors.map(e => `<li>${esc(e)}</li>`).join('');
   resultDiv.innerHTML =
-    `<div class="result-error"><strong>Invalid deck:</strong><ul>${items}</ul></div>`;
+    `<div class="result-error"><p>This deck is <strong>illegal</strong>${formatName ? ` for ${esc(formatName)}` : ''}.</p><ul>${items}</ul></div>`;
 }
 
 function esc(str) {

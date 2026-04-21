@@ -10,21 +10,26 @@ body {
   line-height: 1.6;
   color: #111;
   background: #fff;
-  padding: 2rem 1rem;
+}
+
+#header {
+  background-color: #333;
+  color: #fff;
+}
+
+#header h1 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0;
 }
 
 .container {
   max-width: 600px;
   margin: 0 auto;
+  padding: 1rem;
 }
 
-h1 {
-  font-size: 1.1rem;
-  font-weight: bold;
-  margin-bottom: 1.5rem;
-}
-
-#result {
+#result > div {
   margin-bottom: 1.25rem;
 }
 
