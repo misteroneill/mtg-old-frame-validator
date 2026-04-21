@@ -9,6 +9,16 @@ Card legality is verified against the [Scryfall](https://scryfall.com) API.
 | ID | Name | Rules |
 |----|------|-------|
 | `r40` | Revised 40 | <https://northernpaladins.com/r40/> |
+| `fe40` | Fallen Empires 40 | See below |
+
+### Fallen Empires 40 (FE40)
+
+- Minimum 40 card mainboard; 0–5 card sideboard
+- Card pool: Fallen Empires. Basic lands from any set are unrestricted.
+- Maximum 4 copies of any card across mainboard and sideboard combined (e.g. 3 main + 1 side is legal)
+- Fallen Empires printed multiple alternate arts for many cards; all copies of the same card name count together regardless of art variant
+- **Banned:** Hymn to Tourach
+- **Restricted** (max 2 copies across main + sideboard): Dwarven Catapult, Hand of Justice, Icatian Javelineers
 
 ## Usage
 
@@ -54,7 +64,8 @@ mtg-old-frame-validator/
     ├── scryfall.js         # Scryfall API client (cached, rate-limited)
     └── formats/
         ├── index.js        # Format registry
-        └── r40.js          # Revised 40 validator
+        ├── r40.js          # Revised 40 validator
+        └── fe40.js         # Fallen Empires 40 validator
 ```
 
 ## Adding a New Format

@@ -8,10 +8,12 @@
  *   3. Add a corresponding <option> to the <select> in index.html.
  */
 
-import { R40 } from './r40.js';
+import { R40  } from './r40.js';
+import { FE40 } from './fe40.js';
 
 export const FORMATS = {
-  r40: R40,
+  r40:  R40,
+  fe40: FE40,
 };
 
 /**

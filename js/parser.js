@@ -6,7 +6,7 @@
  *   4 Lightning Bolt (3ED) 163
  *   4 Lightning Bolt (3ED) 163 *F*
  *
- * Section headers (case-insensitive):
+ * Section headers (case-insensitive) start with:
  *   Deck / Mainboard / Main Board
  *   Sideboard / Side Board
  *   // Deck, // Sideboard, etc.
@@ -26,11 +26,11 @@ export function parseDeckList(text) {
 
     // Detect section headers (with or without leading //)
     const header = line.replace(/^\/\/\s*/, '').toLowerCase();
-    if (/^(sideboard|side board|side)$/.test(header)) {
+    if (/^(sideboard|side board|side)/.test(header)) {
       section = 'sideboard';
       continue;
     }
-    if (/^(deck|mainboard|main board|main)$/.test(header)) {
+    if (/^(deck|mainboard|main board|main)/.test(header)) {
       section = 'mainboard';
       continue;
     }
