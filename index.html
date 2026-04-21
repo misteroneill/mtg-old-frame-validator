@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MTG Old Frame Deck Validator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>MTG Old Frame Deck Validator</h1>
+    <div id="result"></div>
+    <form id="validator-form">
+      <div class="field">
+        <label for="format">Format</label>
+        <select id="format" name="format">
+          <option value="r40">Revised 40 (R40)</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="decklist">Deck List (Moxfield plain text format)</label>
+        <textarea
+          id="decklist"
+          name="decklist"
+          rows="24"
+          spellcheck="false"
+          placeholder="4 Lightning Bolt&#10;4 Counterspell&#10;4 Serra Angel&#10;20 Plains&#10;..."
+        ></textarea>
+      </div>
+      <button type="submit" id="submit-btn">Validate</button>
+    </form>
+  </div>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

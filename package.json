@@ -1,0 +1,9 @@
+{
+  "name": "mtg-old-frame-validator",
+  "version": "0.0.0",
+  "description": "Deck list validator for Magic: The Gathering old frame formats",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "license": "Apache-2.0"
+}
