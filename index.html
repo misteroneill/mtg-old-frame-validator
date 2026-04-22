@@ -24,28 +24,36 @@
       </ol>
     </div>
   </div>
-  <div class="container">
-    <div id="result"></div>
-    <form id="validator-form">
-      <div class="field">
-        <label for="format">Format</label>
-        <select id="format" name="format">
-          <option value="r40">Revised 40 (R40)</option>
-          <option value="fe40">Fallen Empires 40 (FE40)</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="decklist">Deck List (Moxfield Plain Text format)</label>
-        <textarea
-          id="decklist"
-          name="decklist"
-          rows="24"
-          spellcheck="false"
-          placeholder="4 Lightning Bolt&#10;4 Counterspell&#10;4 Serra Angel&#10;20 Plains&#10;..."
-        ></textarea>
-      </div>
-      <button type="submit" id="submit-btn">Validate</button>
-    </form>
+  <div id="content">
+    <div class="container">
+      <div id="result"></div>
+      <form id="validator-form">
+        <div class="field">
+          <label for="format">Format</label>
+          <select id="format" name="format">
+            <option value="r40">Revised 40 (R40)</option>
+            <option value="fe40">Fallen Empires 40 (FE40)</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="decklist">Deck List (Moxfield Plain Text format)</label>
+          <textarea
+            id="decklist"
+            name="decklist"
+            rows="24"
+            spellcheck="false"
+            placeholder="4 Savannah Lions&#10;4 Serra Angel&#10;20 Plains&#10;..."
+          ></textarea>
+        </div>
+        <button type="submit" id="submit-btn">Validate</button>
+      </form>
+    </div>
+  </div>
+  <div id="footer">
+    <div class="container">
+      <p>Created with &hearts; by &copy; <a href="https://www.misteroneill.com/" target="_blank">Patrick O'Neill</a></p>
+      <p>Report issues or open PRs <a href="https://github.com/misteroneill/mtg-old-frame-validator" target="_blank">on GitHub</a></p>
+    </div>
   </div>
   <script type="module" src="js/main.js"></script>
 </body>

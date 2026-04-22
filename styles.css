@@ -5,11 +5,24 @@
 }
 
 body {
-  font-family: monospace;
+  background: #333;
+  font-family: Georgia, serif;
   font-size: 14px;
   line-height: 1.6;
-  color: #111;
-  background: #fff;
+  color: #fff;
+}
+
+a {
+  color: #8bb2ef;
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
 }
 
 p {
@@ -73,6 +86,12 @@ button:disabled {
   cursor: not-allowed;
 }
 
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
 #header {
   background-color: #333;
   color: #fff;
@@ -85,8 +104,6 @@ button:disabled {
 }
 
 #header h1 {
-  font-size: 1.1rem;
-  font-weight: bold;
   margin: 0;
 }
 
@@ -110,25 +127,16 @@ button:disabled {
 }
 
 #help-panel {
-  border-bottom: 1px solid #ccc;
-  background: #f5f5f5;
+  background: #555;
 }
 
-#help-panel .container {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+#content {
+  background: #fff;
+  color: #333;
 }
 
-#help-panel
-
-#help-panel a {
-  color: #111;
-}
-
-.container {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 1rem;
+#content a {
+  color: #3d83f1;
 }
 
 #result > div {
