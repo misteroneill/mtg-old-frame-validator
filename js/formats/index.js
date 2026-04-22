@@ -8,12 +8,14 @@
  *   3. Add a corresponding <option> to the <select> in index.html.
  */
 
-import { R40  } from './r40.js';
-import { FE40 } from './fe40.js';
+import { R40             } from './r40.js';
+import { FE40            } from './fe40.js';
+import { ForgottenRealms } from './forgotten-realms.js';
 
 export const FORMATS = {
-  r40:  R40,
-  fe40: FE40,
+  r40:               R40,
+  fe40:              FE40,
+  'forgotten-realms': ForgottenRealms,
 };
 
 /**
