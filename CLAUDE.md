@@ -25,9 +25,24 @@ js/
   scryfall.js               # Scryfall API client (cached, rate-limited)
   formats/
     index.js                # Format registry (FORMATS map + getFormat())
+    shared.js               # Shared utilities (BASIC_LANDS, buildCombined, etc.)
     r40.js                  # Revised 40
     fe40.js                 # Fallen Empires 40
     fr.js                   # Forgotten Realms (DRK/FEM/HML)
+    oft2.js                 # Old Fashioned Type 2
+    atl.js                  # Atlantic 93/94
+    swed.js                 # Old School 93/94 (Swedish)
+    ec.js                   # Eternal Central 93/94
+    a2a.js                  # Alpha to Alliances
+    aaa.js                  # Alpha to Alliances Ante
+    xpts.js                 # X-Point Old School 93/94
+    7pts.js                 # 7 Points Singleton 93/94
+tests/
+  helpers.js                # Shared test utilities (card(), entry(), deck())
+  parser.test.js
+  scryfall.test.js
+  shared.test.js
+  formats/                  # One test file per format
 ```
 
 ## Adding a new format
@@ -54,10 +69,12 @@ Four things need to change:
 
 4. **Document it in `README.md`** — add a row to the supported formats table and an inline rules summary (formats in this project have no dedicated external rules page).
 
+5. **Add `tests/formats/<id>.test.js`** — mock `../../js/scryfall.js` with a per-file `DB` object and cover: valid deck, deck too small, sideboard too large, card not found, banned card, restricted card over limit, copy limit. See existing test files for the pattern.
+
 ## Format module conventions
 
 - **Module-level `cardPool` Map** — keyed by lowercase card name, valued by Scryfall card object or `null`. Declared at module scope so it persists across `validate()` calls within a session. The Revised/Fallen Empires/etc. card pools never change; a card looked up once need not be fetched again.
-- **Basic lands** — defined as a module-level `BASIC_LANDS` Set of lowercase names (`plains`, `island`, `swamp`, `mountain`, `forest`). Always skip API lookup and copy-limit checks for these.
+- **Basic lands** — imported as `BASIC_LANDS` from `shared.js` (a Set of lowercase names). Always skip API lookup and copy-limit checks for these.
 - **Copy limits spanning main + sideboard** — combine quantities from both zones before applying limits. When reporting an error for a card that appears in both zones, include the breakdown: `"3 main, 1 sideboard"`.
 - **Banned before restricted before copy limit** — check in that order and `continue` after a ban hit so a card only produces one error.
 - **Canonical names** — always use `cardData.name` (from Scryfall) for banned/restricted set membership checks, not the user-supplied string, so capitalisation differences don't matter.

@@ -21,6 +21,7 @@
  */
 
 import { batchGetCardsInSet } from '../scryfall.js';
+import { BASIC_LANDS } from './shared.js';
 
 const LEGAL_SET = '3ed';
 
@@ -100,7 +101,7 @@ export const R40 = {
     // all in one POST to /cards/collection rather than one request per card.
     const unknownNames = [
       ...new Set(mainboard.map(c => c.name.toLowerCase())),
-    ].filter(n => !cardPool.has(n));
+    ].filter(n => !BASIC_LANDS.has(n) && !cardPool.has(n));
 
     if (unknownNames.length > 0) {
       const fetched = await batchGetCardsInSet(unknownNames, LEGAL_SET);
@@ -114,6 +115,8 @@ export const R40 = {
     let totalUncommons = 0;
 
     for (const { qty, name } of mainboard) {
+      if (BASIC_LANDS.has(name.toLowerCase())) continue;
+
       const cardData = cardPool.get(name.toLowerCase());
       const canonicalName = cardData ? cardData.name : name;
 

@@ -1,6 +1,6 @@
-# MTG Old Frame Deck Validator
+# Magic: The Gathering Old Frame Deck Validator
 
-A browser-based deck list validator for Magic: The Gathering old frame formats (2003 and earlier). Paste a deck list, choose a format, and get immediate feedback on whether your deck is construction-legal.
+A browser-based deck list validator for Magic: The Gathering old frame (cards printed 2003 and earlier) formats. Paste a deck list, choose a format, and get immediate feedback on whether your deck is construction-legal.
 
 Card legality is verified against the [Scryfall](https://scryfall.com) API.
 
@@ -20,22 +20,6 @@ Card legality is verified against the [Scryfall](https://scryfall.com) API.
 | `swed` | Old School 93/94 (Swedish) | <https://oldschool-mtg.blogspot.com/p/banrestriction.html> |
 | `ec` | Eternal Central 93/94 (EC) | <https://www.eternalcentral.com/9394rules/> |
 
-### Eternal Central 93/94 (EC)
-
-- Minimum 60 card mainboard; 0–15 card sideboard
-- Card pool: Alpha, Beta, Unlimited, CE, IE, Arabian Nights, Antiquities, Revised, Legends, The Dark, and Fallen Empires. Non-foil reprints with original art and original frame in any language are also permitted; the validator checks only that the card name was printed in a legal set. Three 1994 promos are also legal: Arena, Sewers of Estark, Nalathni Dragon. Basic lands from any old frame set are unrestricted.
-- Maximum 4 copies of any unrestricted card across mainboard and sideboard combined
-- **Banned:** Bronze Tablet, Contract from Below, Darkpact, Demonic Attorney, Jeweled Bird, Rebirth, Tempest Efreet
-- **Restricted** (max 1 copy across main + sideboard): Ancestral Recall, Balance, Black Lotus, Braingeyser, Chaos Orb, Channel, Demonic Tutor, Library of Alexandria, Mana Drain, Mind Twist, Mox Emerald, Mox Jet, Mox Pearl, Mox Ruby, Mox Sapphire, Recall, Regrowth, Sol Ring, Time Vault, Time Walk, Timetwister, Wheel of Fortune
-
-### Old School 93/94 (Swedish)
-
-- Minimum 60 card mainboard; 0–15 card sideboard
-- Card pool: Alpha, Beta, Unlimited, Arabian Nights, Antiquities, Legends, The Dark, and Summer Magic. English printings only (cannot be enforced by the validator). Basic lands from any old frame set are unrestricted.
-- Maximum 4 copies of any unrestricted card across mainboard and sideboard combined
-- No cards are banned; all 7 ante cards are legal for deck construction but must be removed from the deck before non-ante play
-- **Restricted** (max 1 copy across main + sideboard): Ancestral Recall, Balance, Black Lotus, Braingeyser, Channel, Chaos Orb, Contract from Below, Darkpact, Demonic Tutor, Library of Alexandria, Mana Drain, Mind Twist, Mishra's Workshop, Mox Emerald, Mox Jet, Mox Pearl, Mox Ruby, Mox Sapphire, Regrowth, Sol Ring, Strip Mine, Tempest Efreet, Time Walk, Timetwister, Wheel of Fortune
-
 ### Fallen Empires 40 (FE40)
 
 - Minimum 40 card mainboard; 0–5 card sideboard
@@ -44,46 +28,6 @@ Card legality is verified against the [Scryfall](https://scryfall.com) API.
 - Fallen Empires printed multiple alternate arts for many cards; all copies of the same card name count together regardless of art variant
 - **Banned:** Hymn to Tourach
 - **Restricted** (max 2 copies across main + sideboard): Dwarven Catapult, Hand of Justice, Icatian Javelineers
-
-### Alpha to Alliances (A2A)
-
-- Minimum 60 card mainboard; 0–15 card sideboard
-- Card pool: Alpha, Beta, Unlimited, CE, IE, Arabian Nights, Antiquities, Revised, Legends, The Dark, Fallen Empires, Fourth Edition, Ice Age, Chronicles, Homelands, and Alliances. Basic lands from any set are unrestricted.
-- Six legal promo cards: Arena, Giant Badger, Nalathni Dragon, Sewers of Estark, and Windseeker Centaur (unlimited copies); Mana Crypt (restricted)
-- **Unlimited copies:** any card with the Aurochs or Rat creature type
-- Maximum 4 copies of any other unrestricted card across mainboard and sideboard combined
-- **Banned:** Amulet of Quoz, Bronze Tablet, Contract from Below, Darkpact, Demonic Attorney, Jeweled Bird, Rebirth, Tempest Efreet, Timmerian Fiends
-- **Restricted** (max 1 copy across main + sideboard): Ancestral Recall, Balance, Black Lotus, Braingeyser, Chaos Orb, Channel, Demonic Consultation, Demonic Tutor, Library of Alexandria, Mana Crypt, Mana Drain, Mind Twist, Mox Emerald, Mox Jet, Mox Pearl, Mox Ruby, Mox Sapphire, Recall, Regrowth, Sol Ring, Time Vault, Time Walk, Timetwister, Wheel of Fortune
-
-### Alpha to Alliances Ante (AAA)
-
-- Uses all Alpha to Alliances rules, with the nine ante cards un-banned and legal
-- **Restricted** (in addition to the A2A restricted list): Contract from Below, Jeweled Bird
-- All other ante cards (Amulet of Quoz, Bronze Tablet, Darkpact, Demonic Attorney, Rebirth, Tempest Efreet, Timmerian Fiends) are legal at the standard 4-copy limit
-
-### 7 Points Singleton 93/94 (7pts)
-
-- Exactly 60 cards mainboard; no sideboard permitted
-- Card pool: Alpha, Beta, Arabian Nights, Antiquities, Legends, The Dark, and Fallen Empires. Reprints with original artwork (Unlimited, Revised, 4th/5th Edition, etc.) are permitted; the validator checks only that the card name was printed in a legal set. Three 1994 promos are also legal: Arena, Sewers of Estark, Nalathni Dragon.
-- Singleton format: maximum 1 copy of any non-basic-land card
-- **Banned:** all 9 ante cards (Amulet of Quoz, Bronze Tablet, Contract from Below, Darkpact, Demonic Attorney, Jeweled Bird, Rebirth, Tempest Efreet, Timmerian Fiends)
-- Total point value of all cards in the deck must not exceed 7
-- Point values: Ancestral Recall (4); Braingeyser, Control Magic, Disintegrate, Fireball, Library of Alexandria, Mind Twist (3 each); Armageddon, Black Lotus, Demonic Tutor, Earthquake, Falling Star, Land Tax, Mana Drain, Moat, Mox Emerald, Mox Jet, Mox Pearl, Mox Ruby, Mox Sapphire, Sol Ring, The Abyss, Time Walk (2 each); Amnesia, Balance, Black Vise, Dark Ritual, Drain Life, Guardian Beast, Hymn to Tourach, Icy Manipulator, Karakas, Mana Vault, Maze of Ith, Old Man of the Sea, Pestilence, Pyrotechnics, Recall, Regrowth, Steal Artifact, Triskelion, Winter Orb (1 each)
-
-### X-Point Old School 93/94 (Xpts)
-
-- All Atlantic 93/94 rules apply (same legal sets, banned list, restricted list, deck/sideboard size)
-- Additional constraint: total point value of all cards across main deck and sideboard combined must not exceed 10
-- Point values: Ancestral Recall (6); Mind Twist (4); Black Lotus, Demonic Tutor, Library of Alexandria (3 each); Balance, Braingeyser, Hymn to Tourach, Land Tax, Mox Emerald, Mox Jet, Mox Pearl, Mox Ruby, Mox Sapphire, Sol Ring, Time Walk, Timetwister, Wheel of Fortune (2 each); Armageddon, Mana Drain, Maze of Ith, Mishra's Factory, Mishra's Workshop, Moat, Recall, Regrowth, The Abyss (1 each)
-- Each copy of a pointed card contributes its value (e.g. 4 Hymn to Tourach = 8 points)
-
-### Atlantic 93/94 (ATL)
-
-- Minimum 60 card mainboard; 0–15 card sideboard
-- Card pool: Alpha, Beta, Arabian Nights, Antiquities, Legends, The Dark, and Fallen Empires. Reprint policy (CE/ICE, etc.) is community-defined; this validator checks only that the card name was printed in a legal set. Basic lands from any old frame set are unrestricted.
-- Maximum 4 copies of any unrestricted card across mainboard and sideboard combined
-- **Banned:** Bronze Tablet, Contract From Below, Darkpact, Demonic Attorney, Jeweled Bird, Rebirth, Tempest Efreet
-- **Restricted** (max 1 copy across main + sideboard): Ancestral Recall, Balance, Black Lotus, Braingeyser, Chaos Orb, Channel, Demonic Tutor, Library of Alexandria, Mana Drain, Mind Twist, Mox Emerald, Mox Jet, Mox Pearl, Mox Ruby, Mox Sapphire, Regrowth, Sol Ring, Strip Mine, Time Walk, Timetwister, Wheel of Fortune
 
 ### Old Fashioned Type 2 (OFT2)
 
