@@ -18,6 +18,7 @@ import { AAA             } from './aaa.js';
 import { Xpts            } from './xpts.js';
 import { SevenPts        } from './7pts.js';
 import { Swedish         } from './swed.js';
+import { EC              } from './ec.js';
 
 export const FORMATS = {
   r40:   R40,
@@ -30,6 +31,7 @@ export const FORMATS = {
   xpt:   Xpts,
   '7pt': SevenPts,
   swed:  Swedish,
+  ec:    EC,
 };
 
 /**

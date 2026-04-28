@@ -32,16 +32,23 @@
           <label for="format">Format</label>
           <select id="format" name="format" required>
             <option value="" selected disabled>---</option>
-            <option value="r40">Revised 40 (R40)</option>
-            <option value="fe40">Fallen Empires 40 (FE40)</option>
-            <option value="fr">Forgotten Realms (DRK/FEM/HML)</option>
-            <option value="oft2">Old Fashioned Type 2 (OFT2)</option>
-            <option value="atl">Atlantic 93/94 (ATL)</option>
-            <option value="a2a">Alpha to Alliances (A2A)</option>
-            <option value="aaa">Alpha to Alliances Ante (AAA)</option>
-            <option value="xpt">X-Point Old School 93/94 (Xpts)</option>
-            <option value="7pt">7 Points Singleton 93/94 (7pts)</option>
-            <option value="swed">Old School 93/94 (Swedish)</option>
+            <optgroup label="Alpha to Alliances">
+              <option value="a2a">Alpha to Alliances (A2A)</option>
+              <option value="aaa">Alpha to Alliances Ante (AAA)</option>
+            </optgroup>
+            <optgroup label="Old School 93/94">
+              <option value="7pt">7 Points Singleton (7pts)</option>
+              <option value="atl">Atlantic (ATL)</option>
+              <option value="swed">Old School (Swedish)</option>
+              <option value="ec">Eternal Central (EC)</option>
+              <option value="xpt">X-Points (Xpts)</option>
+            </optgroup>
+            <optgroup label="Set-specific Formats">
+              <option value="fe40">Fallen Empires 40 (FE40)</option>
+              <option value="fr">Forgotten Realms (DRK/FEM/HML)</option>
+              <option value="oft2">Old Fashioned Type 2 (OFT2)</option>
+              <option value="r40">Revised 40 (R40)</option>
+            </optgroup>
           </select>
         </div>
         <div class="field">

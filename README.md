@@ -18,6 +18,15 @@ Card legality is verified against the [Scryfall](https://scryfall.com) API.
 | `xpt` | X-Point Old School 93/94 (Xpts) | <https://xpointoldschool.com/rules-points/> |
 | `7pt` | 7 Points Singleton 93/94 (7pts) | <https://7pts-singleton.com/> |
 | `swed` | Old School 93/94 (Swedish) | <https://oldschool-mtg.blogspot.com/p/banrestriction.html> |
+| `ec` | Eternal Central 93/94 (EC) | <https://www.eternalcentral.com/9394rules/> |
+
+### Eternal Central 93/94 (EC)
+
+- Minimum 60 card mainboard; 0–15 card sideboard
+- Card pool: Alpha, Beta, Unlimited, CE, IE, Arabian Nights, Antiquities, Revised, Legends, The Dark, and Fallen Empires. Non-foil reprints with original art and original frame in any language are also permitted; the validator checks only that the card name was printed in a legal set. Three 1994 promos are also legal: Arena, Sewers of Estark, Nalathni Dragon. Basic lands from any old frame set are unrestricted.
+- Maximum 4 copies of any unrestricted card across mainboard and sideboard combined
+- **Banned:** Bronze Tablet, Contract from Below, Darkpact, Demonic Attorney, Jeweled Bird, Rebirth, Tempest Efreet
+- **Restricted** (max 1 copy across main + sideboard): Ancestral Recall, Balance, Black Lotus, Braingeyser, Chaos Orb, Channel, Demonic Tutor, Library of Alexandria, Mana Drain, Mind Twist, Mox Emerald, Mox Jet, Mox Pearl, Mox Ruby, Mox Sapphire, Recall, Regrowth, Sol Ring, Time Vault, Time Walk, Timetwister, Wheel of Fortune
 
 ### Old School 93/94 (Swedish)
 
