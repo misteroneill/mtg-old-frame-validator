@@ -1,5 +1,5 @@
 /**
- * X-Point Old School 93/94 (XPT) format validator.
+ * X-Point Old School 93/94 (Xpts) format validator.
  * Rules: https://xpointoldschool.com/rules-points/
  *
  * Base rules are identical to Atlantic 93/94 (ATL): same legal sets
@@ -102,9 +102,9 @@ const BASIC_LANDS = new Set([
 // Module-level card pool cache: persists across validate() calls within a session.
 const cardPool = new Map();
 
-export const XPT = {
+export const Xpts = {
   id:   'xpt',
-  name: 'X-Point Old School 93/94 (XPT)',
+  name: 'X-Point Old School 93/94 (Xpts)',
 
   /**
    * @param {{ mainboard: Array<{qty:number, name:string}>, sideboard: Array<{qty:number, name:string}> }} deck
@@ -182,7 +182,7 @@ export const XPT = {
 
       // Banned check
       if (BANNED.has(canonicalName) || ANTE_BANNED.has(canonicalName)) {
-        errors.push(`${canonicalName} is banned in X-Point Old School 93/94 (XPT).`);
+        errors.push(`${canonicalName} is banned in X-Point Old School 93/94 (Xpts).`);
         continue;
       }
 

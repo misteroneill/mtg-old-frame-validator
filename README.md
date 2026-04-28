@@ -15,7 +15,8 @@ Card legality is verified against the [Scryfall](https://scryfall.com) API.
 | `atl` | Atlantic 93/94 (ATL) | <https://sentineloldschoolmtg.com/atlantic-93-94/> |
 | `a2a` | Alpha to Alliances (A2A) | <https://musiccityos.com/formats/alpha-alliances/> |
 | `aaa` | Alpha to Alliances Ante (AAA) | <https://musiccityos.com/formats/ante/> |
-| `xpt` | X-Point Old School 93/94 (XPT) | <https://xpointoldschool.com/rules-points/> |
+| `xpt` | X-Point Old School 93/94 (Xpts) | <https://xpointoldschool.com/rules-points/> |
+| `7pt` | 7 Points Singleton 93/94 (7pts) | <https://7pts-singleton.com/> |
 
 ### Fallen Empires 40 (FE40)
 
@@ -42,7 +43,16 @@ Card legality is verified against the [Scryfall](https://scryfall.com) API.
 - **Restricted** (in addition to the A2A restricted list): Contract from Below, Jeweled Bird
 - All other ante cards (Amulet of Quoz, Bronze Tablet, Darkpact, Demonic Attorney, Rebirth, Tempest Efreet, Timmerian Fiends) are legal at the standard 4-copy limit
 
-### X-Point Old School 93/94 (XPT)
+### 7 Points Singleton 93/94 (7pts)
+
+- Exactly 60 cards mainboard; no sideboard permitted
+- Card pool: Alpha, Beta, Arabian Nights, Antiquities, Legends, The Dark, and Fallen Empires. Reprints with original artwork (Unlimited, Revised, 4th/5th Edition, etc.) are permitted; the validator checks only that the card name was printed in a legal set. Three 1994 promos are also legal: Arena, Sewers of Estark, Nalathni Dragon.
+- Singleton format: maximum 1 copy of any non-basic-land card
+- **Banned:** all 9 ante cards (Amulet of Quoz, Bronze Tablet, Contract from Below, Darkpact, Demonic Attorney, Jeweled Bird, Rebirth, Tempest Efreet, Timmerian Fiends)
+- Total point value of all cards in the deck must not exceed 7
+- Point values: Ancestral Recall (4); Braingeyser, Control Magic, Disintegrate, Fireball, Library of Alexandria, Mind Twist (3 each); Armageddon, Black Lotus, Demonic Tutor, Earthquake, Falling Star, Land Tax, Mana Drain, Moat, Mox Emerald, Mox Jet, Mox Pearl, Mox Ruby, Mox Sapphire, Sol Ring, The Abyss, Time Walk (2 each); Amnesia, Balance, Black Vise, Dark Ritual, Drain Life, Guardian Beast, Hymn to Tourach, Icy Manipulator, Karakas, Mana Vault, Maze of Ith, Old Man of the Sea, Pestilence, Pyrotechnics, Recall, Regrowth, Steal Artifact, Triskelion, Winter Orb (1 each)
+
+### X-Point Old School 93/94 (Xpts)
 
 - All Atlantic 93/94 rules apply (same legal sets, banned list, restricted list, deck/sideboard size)
 - Additional constraint: total point value of all cards across main deck and sideboard combined must not exceed 10
@@ -123,7 +133,8 @@ mtg-old-frame-validator/
         ├── atl.js                # Atlantic 93/94 validator
         ├── a2a.js                # Alpha to Alliances validator
         ├── aaa.js                # Alpha to Alliances Ante validator
-        └── xpt.js                # X-Point Old School 93/94 validator
+        ├── xpt.js                # X-Point Old School 93/94 validator
+        └── 7pt.js                # 7 Points Singleton 93/94 validator
 ```
 
 ## Adding a New Format

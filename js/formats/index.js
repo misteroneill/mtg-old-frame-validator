@@ -15,7 +15,8 @@ import { OFT2            } from './oft2.js';
 import { ATL             } from './atl.js';
 import { A2A             } from './a2a.js';
 import { AAA             } from './aaa.js';
-import { XPT             } from './xpt.js';
+import { Xpts            } from './xpts.js';
+import { SevenPts        } from './7pts.js';
 
 export const FORMATS = {
   r40:               R40,
@@ -25,7 +26,8 @@ export const FORMATS = {
   atl:               ATL,
   a2a:               A2A,
   aaa:               AAA,
-  xpt:               XPT,
+  xpt:               Xpts,
+  '7pt':             SevenPts,
 };
 
 /**
