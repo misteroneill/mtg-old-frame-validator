@@ -22,6 +22,10 @@
  */
 
 import { batchGetCardsInAnySets } from '../scryfall.js';
+import {
+  BASIC_LANDS, buildCombined,
+  getPointsContribution, checkPointsLimit,
+} from './shared.js';
 
 const LEGAL_SETS = ['lea', 'leb', 'arn', 'atq', 'leg', 'drk', 'fem'];
 
@@ -95,10 +99,6 @@ const POINTS = new Map([
   ['Winter Orb',            1],
 ]);
 
-const BASIC_LANDS = new Set([
-  'plains', 'island', 'swamp', 'mountain', 'forest',
-]);
-
 // Module-level card pool cache: persists across validate() calls within a session.
 const cardPool = new Map();
 
@@ -111,17 +111,14 @@ export const SevenPts = {
    * @returns {Promise<{ valid: boolean, errors: string[] }>}
    */
   async validate(deck) {
-    const errors = [];
     const { mainboard, sideboard } = deck;
 
-    // --- Size checks ---
     const mainTotal = mainboard.reduce((s, c) => s + c.qty, 0);
     const sideTotal = sideboard.reduce((s, c) => s + c.qty, 0);
 
+    const errors = [];
     if (mainTotal !== EXACT_DECK_SIZE) {
-      errors.push(
-        `Deck must contain exactly ${EXACT_DECK_SIZE} cards (found ${mainTotal}).`
-      );
+      errors.push(`Deck must contain exactly ${EXACT_DECK_SIZE} cards (found ${mainTotal}).`);
     }
     if (sideTotal > 0) {
       errors.push(
@@ -129,44 +126,22 @@ export const SevenPts = {
       );
     }
 
-    // --- Build combined (main + side) quantity map ---
-    const combined = new Map();
+    const combined = buildCombined(mainboard, sideboard);
+    if (combined.size === 0) return { valid: errors.length === 0, errors };
 
-    const tally = (entries, zone) => {
-      for (const { qty, name } of entries) {
-        const key = name.toLowerCase();
-        if (!combined.has(key)) {
-          combined.set(key, { displayName: name, mainQty: 0, sideQty: 0 });
-        }
-        combined.get(key)[zone] += qty;
-      }
-    };
-    tally(mainboard, 'mainQty');
-    tally(sideboard, 'sideQty');
-
-    if (combined.size === 0) {
-      return { valid: errors.length === 0, errors };
-    }
-
-    // --- Populate card pool for unknown non-basic, non-promo cards ---
     const toFetch = [...combined.keys()].filter(
       name => !BASIC_LANDS.has(name) && !LEGAL_PROMOS.has(name) && !cardPool.has(name)
     );
-
     if (toFetch.length > 0) {
       const fetched = await batchGetCardsInAnySets(toFetch, LEGAL_SETS);
-      for (const [name, data] of fetched) {
-        cardPool.set(name.toLowerCase(), data);
-      }
+      for (const [name, data] of fetched) cardPool.set(name.toLowerCase(), data);
     }
 
-    // --- Per-card rule checks + points accumulation ---
     let totalPoints = 0;
     const pointsBreakdown = [];
 
     for (const [key, { displayName, mainQty, sideQty }] of combined) {
       const totalQty = mainQty + sideQty;
-
       if (BASIC_LANDS.has(key)) continue;
 
       const cardData      = cardPool.get(key);
@@ -180,40 +155,27 @@ export const SevenPts = {
         continue;
       }
 
-      // Banned check
       if (BANNED.has(canonicalName)) {
         errors.push(`${canonicalName} is banned in 7 Points Singleton 93/94.`);
         continue;
       }
 
-      // Singleton check
       if (totalQty > MAX_COPIES) {
         const location = sideQty > 0
           ? `${mainQty} main, ${sideQty} sideboard`
           : `${totalQty}`;
-        errors.push(
-          `${canonicalName} — only 1 copy allowed in a singleton format (found ${location}).`
-        );
+        errors.push(`${canonicalName} — only 1 copy allowed in a singleton format (found ${location}).`);
       }
 
-      // Points accumulation
-      const pts = POINTS.get(canonicalName);
+      const pts = getPointsContribution(canonicalName, totalQty, POINTS);
       if (pts) {
-        const contribution = pts * totalQty;
-        totalPoints += contribution;
-        const label = totalQty > 1
-          ? `${canonicalName} (${pts}×${totalQty})`
-          : `${canonicalName} (${pts})`;
-        pointsBreakdown.push(label);
+        totalPoints += pts.contribution;
+        pointsBreakdown.push(pts.label);
       }
     }
 
-    // --- Points cap check ---
-    if (totalPoints > MAX_POINTS) {
-      errors.push(
-        `Deck exceeds the ${MAX_POINTS}-point limit (${totalPoints} points: ${pointsBreakdown.join(', ')}).`
-      );
-    }
+    const pointsError = checkPointsLimit(totalPoints, MAX_POINTS, pointsBreakdown);
+    if (pointsError) errors.push(pointsError);
 
     return { valid: errors.length === 0, errors };
   },
