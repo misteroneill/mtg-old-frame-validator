@@ -17,6 +17,15 @@ Card legality is verified against the [Scryfall](https://scryfall.com) API.
 | `aaa` | Alpha to Alliances Ante (AAA) | <https://musiccityos.com/formats/ante/> |
 | `xpt` | X-Point Old School 93/94 (Xpts) | <https://xpointoldschool.com/rules-points/> |
 | `7pt` | 7 Points Singleton 93/94 (7pts) | <https://7pts-singleton.com/> |
+| `swed` | Old School 93/94 (Swedish) | <https://oldschool-mtg.blogspot.com/p/banrestriction.html> |
+
+### Old School 93/94 (Swedish)
+
+- Minimum 60 card mainboard; 0–15 card sideboard
+- Card pool: Alpha, Beta, Unlimited, Arabian Nights, Antiquities, Legends, The Dark, and Summer Magic. English printings only (cannot be enforced by the validator). Basic lands from any old frame set are unrestricted.
+- Maximum 4 copies of any unrestricted card across mainboard and sideboard combined
+- No cards are banned; all 7 ante cards are legal for deck construction but must be removed from the deck before non-ante play
+- **Restricted** (max 1 copy across main + sideboard): Ancestral Recall, Balance, Black Lotus, Braingeyser, Channel, Chaos Orb, Contract from Below, Darkpact, Demonic Tutor, Library of Alexandria, Mana Drain, Mind Twist, Mishra's Workshop, Mox Emerald, Mox Jet, Mox Pearl, Mox Ruby, Mox Sapphire, Regrowth, Sol Ring, Strip Mine, Tempest Efreet, Time Walk, Timetwister, Wheel of Fortune
 
 ### Fallen Empires 40 (FE40)
 
