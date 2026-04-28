@@ -11,6 +11,7 @@ Card legality is verified against the [Scryfall](https://scryfall.com) API.
 | `r40` | Revised 40 | <https://northernpaladins.com/r40/> |
 | `fe40` | Fallen Empires 40 | See below |
 | `forgotten-realms` | Forgotten Realms (DRK/FEM/HML) | See below |
+| `oft2` | Old Fashioned Type 2 (OFT2) | See below |
 
 ### Fallen Empires 40 (FE40)
 
@@ -20,6 +21,13 @@ Card legality is verified against the [Scryfall](https://scryfall.com) API.
 - Fallen Empires printed multiple alternate arts for many cards; all copies of the same card name count together regardless of art variant
 - **Banned:** Hymn to Tourach
 - **Restricted** (max 2 copies across main + sideboard): Dwarven Catapult, Hand of Justice, Icatian Javelineers
+
+### Old Fashioned Type 2 (OFT2)
+
+- Minimum 60 card mainboard; 0–15 card sideboard
+- Card pool: Revised, The Dark, and Fallen Empires. CE/ICE and same-art/same-frame reprints are legal. Basic lands from any old frame set are unrestricted.
+- Maximum 4 copies of any card across mainboard and sideboard combined; only card name matters, not artwork variant
+- **Banned:** Contract From Below, Darkpact, Demonic Attorney, Balance, Braingeyser, Channel, Demonic Tutor, Hymn to Tourach, Maze of Ith, Mind Twist, Sol Ring, Wheel of Fortune
 
 ### Forgotten Realms (DRK/FEM/HML)
 
@@ -75,7 +83,8 @@ mtg-old-frame-validator/
         ├── index.js              # Format registry
         ├── r40.js                # Revised 40 validator
         ├── fe40.js               # Fallen Empires 40 validator
-        └── forgotten-realms.js   # Forgotten Realms validator
+        ├── forgotten-realms.js   # Forgotten Realms validator
+        └── oft2.js               # Old Fashioned Type 2 validator
 ```
 
 ## Adding a New Format

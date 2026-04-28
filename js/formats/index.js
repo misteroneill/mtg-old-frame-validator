@@ -11,11 +11,13 @@
 import { R40             } from './r40.js';
 import { FE40            } from './fe40.js';
 import { ForgottenRealms } from './forgotten-realms.js';
+import { OFT2            } from './oft2.js';
 
 export const FORMATS = {
   r40:               R40,
   fe40:              FE40,
   'forgotten-realms': ForgottenRealms,
+  oft2:              OFT2,
 };
 
 /**
