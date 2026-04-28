@@ -12,6 +12,9 @@ Card legality is verified against the [Scryfall](https://scryfall.com) API.
 | `fe40` | Fallen Empires 40 | See below |
 | `forgotten-realms` | Forgotten Realms (DRK/FEM/HML) | See below |
 | `oft2` | Old Fashioned Type 2 (OFT2) | See below |
+| `atl` | Atlantic 93/94 (ATL) | <https://sentineloldschoolmtg.com/atlantic-93-94/> |
+| `a2a` | Alpha to Alliances (A2A) | <https://musiccityos.com/formats/alpha-alliances/> |
+| `aaa` | Alpha to Alliances Ante (AAA) | <https://musiccityos.com/formats/ante/> |
 
 ### Fallen Empires 40 (FE40)
 
@@ -21,6 +24,30 @@ Card legality is verified against the [Scryfall](https://scryfall.com) API.
 - Fallen Empires printed multiple alternate arts for many cards; all copies of the same card name count together regardless of art variant
 - **Banned:** Hymn to Tourach
 - **Restricted** (max 2 copies across main + sideboard): Dwarven Catapult, Hand of Justice, Icatian Javelineers
+
+### Alpha to Alliances (A2A)
+
+- Minimum 60 card mainboard; 0–15 card sideboard
+- Card pool: Alpha, Beta, Unlimited, CE, IE, Arabian Nights, Antiquities, Revised, Legends, The Dark, Fallen Empires, Fourth Edition, Ice Age, Chronicles, Homelands, and Alliances. Basic lands from any set are unrestricted.
+- Six legal promo cards: Arena, Giant Badger, Nalathni Dragon, Sewers of Estark, and Windseeker Centaur (unlimited copies); Mana Crypt (restricted)
+- **Unlimited copies:** any card with the Aurochs or Rat creature type
+- Maximum 4 copies of any other unrestricted card across mainboard and sideboard combined
+- **Banned:** Amulet of Quoz, Bronze Tablet, Contract from Below, Darkpact, Demonic Attorney, Jeweled Bird, Rebirth, Tempest Efreet, Timmerian Fiends
+- **Restricted** (max 1 copy across main + sideboard): Ancestral Recall, Balance, Black Lotus, Braingeyser, Chaos Orb, Channel, Demonic Consultation, Demonic Tutor, Library of Alexandria, Mana Crypt, Mana Drain, Mind Twist, Mox Emerald, Mox Jet, Mox Pearl, Mox Ruby, Mox Sapphire, Recall, Regrowth, Sol Ring, Time Vault, Time Walk, Timetwister, Wheel of Fortune
+
+### Alpha to Alliances Ante (AAA)
+
+- Uses all Alpha to Alliances rules, with the nine ante cards un-banned and legal
+- **Restricted** (in addition to the A2A restricted list): Contract from Below, Jeweled Bird
+- All other ante cards (Amulet of Quoz, Bronze Tablet, Darkpact, Demonic Attorney, Rebirth, Tempest Efreet, Timmerian Fiends) are legal at the standard 4-copy limit
+
+### Atlantic 93/94 (ATL)
+
+- Minimum 60 card mainboard; 0–15 card sideboard
+- Card pool: Alpha, Beta, Arabian Nights, Antiquities, Legends, The Dark, and Fallen Empires. Reprint policy (CE/ICE, etc.) is community-defined; this validator checks only that the card name was printed in a legal set. Basic lands from any old frame set are unrestricted.
+- Maximum 4 copies of any unrestricted card across mainboard and sideboard combined
+- **Banned:** Bronze Tablet, Contract From Below, Darkpact, Demonic Attorney, Jeweled Bird, Rebirth, Tempest Efreet
+- **Restricted** (max 1 copy across main + sideboard): Ancestral Recall, Balance, Black Lotus, Braingeyser, Chaos Orb, Channel, Demonic Tutor, Library of Alexandria, Mana Drain, Mind Twist, Mox Emerald, Mox Jet, Mox Pearl, Mox Ruby, Mox Sapphire, Regrowth, Sol Ring, Strip Mine, Time Walk, Timetwister, Wheel of Fortune
 
 ### Old Fashioned Type 2 (OFT2)
 
@@ -84,7 +111,10 @@ mtg-old-frame-validator/
         ├── r40.js                # Revised 40 validator
         ├── fe40.js               # Fallen Empires 40 validator
         ├── forgotten-realms.js   # Forgotten Realms validator
-        └── oft2.js               # Old Fashioned Type 2 validator
+        ├── oft2.js               # Old Fashioned Type 2 validator
+        ├── atl.js                # Atlantic 93/94 validator
+        ├── a2a.js                # Alpha to Alliances validator
+        └── aaa.js                # Alpha to Alliances Ante validator
 ```
 
 ## Adding a New Format
