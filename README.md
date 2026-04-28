@@ -15,6 +15,7 @@ Card legality is verified against the [Scryfall](https://scryfall.com) API.
 | `atl` | Atlantic 93/94 (ATL) | <https://sentineloldschoolmtg.com/atlantic-93-94/> |
 | `a2a` | Alpha to Alliances (A2A) | <https://musiccityos.com/formats/alpha-alliances/> |
 | `aaa` | Alpha to Alliances Ante (AAA) | <https://musiccityos.com/formats/ante/> |
+| `xpt` | X-Point Old School 93/94 (XPT) | <https://xpointoldschool.com/rules-points/> |
 
 ### Fallen Empires 40 (FE40)
 
@@ -40,6 +41,13 @@ Card legality is verified against the [Scryfall](https://scryfall.com) API.
 - Uses all Alpha to Alliances rules, with the nine ante cards un-banned and legal
 - **Restricted** (in addition to the A2A restricted list): Contract from Below, Jeweled Bird
 - All other ante cards (Amulet of Quoz, Bronze Tablet, Darkpact, Demonic Attorney, Rebirth, Tempest Efreet, Timmerian Fiends) are legal at the standard 4-copy limit
+
+### X-Point Old School 93/94 (XPT)
+
+- All Atlantic 93/94 rules apply (same legal sets, banned list, restricted list, deck/sideboard size)
+- Additional constraint: total point value of all cards across main deck and sideboard combined must not exceed 10
+- Point values: Ancestral Recall (6); Mind Twist (4); Black Lotus, Demonic Tutor, Library of Alexandria (3 each); Balance, Braingeyser, Hymn to Tourach, Land Tax, Mox Emerald, Mox Jet, Mox Pearl, Mox Ruby, Mox Sapphire, Sol Ring, Time Walk, Timetwister, Wheel of Fortune (2 each); Armageddon, Mana Drain, Maze of Ith, Mishra's Factory, Mishra's Workshop, Moat, Recall, Regrowth, The Abyss (1 each)
+- Each copy of a pointed card contributes its value (e.g. 4 Hymn to Tourach = 8 points)
 
 ### Atlantic 93/94 (ATL)
 
@@ -114,7 +122,8 @@ mtg-old-frame-validator/
         ├── oft2.js               # Old Fashioned Type 2 validator
         ├── atl.js                # Atlantic 93/94 validator
         ├── a2a.js                # Alpha to Alliances validator
-        └── aaa.js                # Alpha to Alliances Ante validator
+        ├── aaa.js                # Alpha to Alliances Ante validator
+        └── xpt.js                # X-Point Old School 93/94 validator
 ```
 
 ## Adding a New Format
