@@ -48,7 +48,7 @@ const BASIC_LANDS = new Set([
 const cardPool = new Map();
 
 export const ForgottenRealms = {
-  id:   'forgotten-realms',
+  id:   'fr',
   name: 'Forgotten Realms (DRK/FEM/HML)',
 
   /**

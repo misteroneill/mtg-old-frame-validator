@@ -102,7 +102,7 @@ const BASIC_LANDS = new Set([
 // Module-level card pool cache: persists across validate() calls within a session.
 const cardPool = new Map();
 
-export const SevenPT = {
+export const SevenPts = {
   id:   '7pt',
   name: '7 Points Singleton 93/94 (7pts)',
 

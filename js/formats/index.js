@@ -10,7 +10,7 @@
 
 import { R40             } from './r40.js';
 import { FE40            } from './fe40.js';
-import { ForgottenRealms } from './forgotten-realms.js';
+import { ForgottenRealms } from './fr.js';
 import { OFT2            } from './oft2.js';
 import { ATL             } from './atl.js';
 import { A2A             } from './a2a.js';
@@ -19,15 +19,15 @@ import { Xpts            } from './xpts.js';
 import { SevenPts        } from './7pts.js';
 
 export const FORMATS = {
-  r40:               R40,
-  fe40:              FE40,
-  'forgotten-realms': ForgottenRealms,
-  oft2:              OFT2,
-  atl:               ATL,
-  a2a:               A2A,
-  aaa:               AAA,
-  xpt:               Xpts,
-  '7pt':             SevenPts,
+  r40:   R40,
+  fe40:  FE40,
+  fr:    ForgottenRealms,
+  oft2:  OFT2,
+  atl:   ATL,
+  a2a:   A2A,
+  aaa:   AAA,
+  xpt:   Xpts,
+  '7pt': SevenPts,
 };
 
 /**

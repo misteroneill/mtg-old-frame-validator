@@ -27,7 +27,7 @@ js/
     index.js                # Format registry (FORMATS map + getFormat())
     r40.js                  # Revised 40
     fe40.js                 # Fallen Empires 40
-    forgotten-realms.js     # Forgotten Realms (DRK/FEM/HML)
+    fr.js                   # Forgotten Realms (DRK/FEM/HML)
 ```
 
 ## Adding a new format

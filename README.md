@@ -10,7 +10,7 @@ Card legality is verified against the [Scryfall](https://scryfall.com) API.
 |----|------|-------|
 | `r40` | Revised 40 | <https://northernpaladins.com/r40/> |
 | `fe40` | Fallen Empires 40 | See below |
-| `forgotten-realms` | Forgotten Realms (DRK/FEM/HML) | See below |
+| `fr` | Forgotten Realms (DRK/FEM/HML) | See below |
 | `oft2` | Old Fashioned Type 2 (OFT2) | See below |
 | `atl` | Atlantic 93/94 (ATL) | <https://sentineloldschoolmtg.com/atlantic-93-94/> |
 | `a2a` | Alpha to Alliances (A2A) | <https://musiccityos.com/formats/alpha-alliances/> |
@@ -128,7 +128,7 @@ mtg-old-frame-validator/
         ├── index.js              # Format registry
         ├── r40.js                # Revised 40 validator
         ├── fe40.js               # Fallen Empires 40 validator
-        ├── forgotten-realms.js   # Forgotten Realms validator
+        ├── fr.js                 # Forgotten Realms validator
         ├── oft2.js               # Old Fashioned Type 2 validator
         ├── atl.js                # Atlantic 93/94 validator
         ├── a2a.js                # Alpha to Alliances validator
