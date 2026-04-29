@@ -17,7 +17,7 @@ Card legality is verified against the [Scryfall](https://scryfall.com) API.
 | `aaa` | Alpha to Alliances Ante (AAA) | <https://musiccityos.com/formats/ante/> |
 | `xpt` | X-Point Old School 93/94 (Xpts) | <https://xpointoldschool.com/rules-points/> |
 | `7pt` | 7 Points Singleton 93/94 (7pts) | <https://7pts-singleton.com/> |
-| `swed` | Old School 93/94 (Swedish) | <https://oldschool-mtg.blogspot.com/p/banrestriction.html> |
+| `swe` | Swedish Old School 93/94 (SWE) | <https://oldschool-mtg.blogspot.com/p/banrestriction.html> |
 | `ec` | Eternal Central 93/94 (EC) | <https://www.eternalcentral.com/9394rules/> |
 
 ### Fallen Empires 40 (FE40)

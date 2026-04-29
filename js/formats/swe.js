@@ -1,5 +1,5 @@
 /**
- * Old School 93/94 (Swedish) format validator.
+ * Swedish Old School 93/94 (SWE) format validator.
  * Rules: https://oldschool-mtg.blogspot.com/p/banrestriction.html
  *
  * Card pool: Alpha (lea), Beta (leb), Unlimited (2ed), Arabian Nights (arn),
@@ -64,7 +64,7 @@ const RESTRICTED = new Set([
 const cardPool = new Map();
 
 export const Swedish = {
-  id:   'swed',
+  id:   'swe',
   name: 'Old School 93/94 (Swedish)',
 
   /**

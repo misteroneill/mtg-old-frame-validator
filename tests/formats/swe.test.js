@@ -7,7 +7,7 @@ vi.mock('../../js/scryfall.js', () => ({
 }));
 
 import { batchGetCardsInAnySets } from '../../js/scryfall.js';
-import { Swedish } from '../../js/formats/swed.js';
+import { Swedish } from '../../js/formats/swe.js';
 
 const DB = {
   'llanowar elves':      card('Llanowar Elves',      'common',   'Creature — Elf Druid'),

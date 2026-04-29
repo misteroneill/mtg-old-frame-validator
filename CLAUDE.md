@@ -31,7 +31,7 @@ js/
     fr.js                   # Forgotten Realms (DRK/FEM/HML)
     oft2.js                 # Old Fashioned Type 2
     atl.js                  # Atlantic 93/94
-    swed.js                 # Old School 93/94 (Swedish)
+    swe.js                  # Swedish Old School 93/94 (SWE)
     ec.js                   # Eternal Central 93/94
     a2a.js                  # Alpha to Alliances
     aaa.js                  # Alpha to Alliances Ante
